@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include <conio.h> // For getch() on Windows
 
 int check_password(char *password);
 
@@ -10,8 +11,20 @@ int main()
     do
     {
       printf("Enter your password here:");
-      scanf("%s",password);
-      strong = check_password(password);
+        int i = 0;
+        char ch;
+        while ((ch = getch()) != '\r') { // '\r' for Enter key
+            if (ch == '\b' && i > 0) { // Handle backspace
+                printf("\b \b");
+                i--;
+            } else if (ch != '\b') {
+                password[i++] = ch;
+                printf(" "); // Replace character with space
+            }
+        }
+        password[i] = '\0'; // Null-terminate the password
+        printf("\n");
+        strong = check_password(password);
     }
     while(!strong);
     return 0;
