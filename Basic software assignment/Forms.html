@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms</title>
+    </head>
+    <body>
+        <h1>Job Application Form</h1>
+
+        <form action="Forms.php" method="post" >
+
+        <p>
+            
+            <b>Full Name</b><br>
+            <input type="text" name="FullName" placeholder="Enter your full name" size="50"><br><br>
+
+            <b>Email</b><br>
+            <input type="email" name="Email" placeholder="Enter your email" size="50"><br><br>
+
+            <b>Password</b><br>
+            <input type="password" name="Password" placeholder="Enter your password" size="50"><br><br>
+
+            <b>Contact Number</b><br>
+            <input type="text" name="ContactNumber" placeholder="Enter your contact number" size="50"><br><br>
+
+            <b>Date of Birth</b><br>    
+            <input type="date" name="DateofBirth" size="50"><br><br>
+
+            <b>Gender:</b><br>    
+            Male <input type="radio" name="gender" value="Male" checked> 
+            Female <input type="radio" name="gender" value="Female"><br><br>
+
+            <b>Position Applied For</b><br>
+            <select name="PositionAppliedFor">
+                <option value="Web Developer">Web Developer</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Data Analyst">Data Analyst</option>
+                <option value="Data Scientist">Data Scientist</option>
+                <option value="AI Engineer">AI Engineer</option>
+            </select><br><br>
+
+            <b>Upload Resume</b><br>
+            <input type="file" name="Resume"><br><br>
+
+
+            <b>Cover Letter</b><br>
+            <textarea name="CoverLetter" rows="10" cols="50" placeholder="Enter your cover letter"></textarea><br><br>
+
+            <b>LinkedIn Profile</b><br>
+            <input type="text" name="LinkedInProfile" placeholder="Your LinkedIn Profile" size="50"><br><br>
+
+            <b>Work Experience (Years)</b><br>
+            <input type="text" name="WorkExperience" placeholder="Your Work Experience" size="50"><br><br>
+
+            <b> Skills: </b> <br>
+            <input type="checkbox" name="Skills[]" value="html">HTML 
+            <input type="checkbox" name="Skills[]" value="css"> CSS 
+            <input type="checkbox" name="Skills[]" value="javascript"> JavaScript 
+            <input type="checkbox" name="Skills[]" value="php"> PHP 
+            <input type="checkbox" name="Skills[]" value="java"> Java <br><br>
+
+
+
+
+            <input type="submit" name="Apply" value="Apply">
+        </p>
+    </form>
+    </body>
+</html>
